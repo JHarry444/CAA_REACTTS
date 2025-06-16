@@ -1,4 +1,4 @@
-type TrainerProps = {
+export type TrainerProps = {
     name: string,
     age: number,
     specialty?: string
