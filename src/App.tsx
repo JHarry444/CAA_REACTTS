@@ -21,6 +21,7 @@ function App() {
         <Route path="/trainerSearch" element={<TrainerSearch/>}/>
         <Route path='/trainerByID/:id' element={<TrainerByID />} />
         <Route path='/queryTrainer' element={<QueryTrainer />} />
+        <Route path='/picExample' element={<QueryTrainer />} />
 
       </Routes>
       <Footer />
