@@ -6,6 +6,7 @@ function Header() {
             <Link to="/">Home</Link>
             <Link to="/externalData">External Data</Link>
             <Link to="/trainerSearch">Trainer Seach</Link>
+            <Link to="/Counter">Counter</Link>
 
         </nav>
     </header>);
