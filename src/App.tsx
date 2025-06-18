@@ -12,26 +12,30 @@ import PicExample from './components/misc/PicExample';
 import TrainerContainer from './components/lifting_state/TrainerContainer';
 import ExternalData from './components/external_data/ExternalData';
 import TrainerByID from './components/routing/TrainerByID';
+import TrainerContainerServer from './components/external_data_server/TrainerContainerServer';
 
 function App() {
   const [theme, setTheme] = useState("dark");
+  const updateTheme = () => setTheme(currentTheme => currentTheme === "dark" ? "light" : "dark")
   return (
     <div className={theme}>
       <Router>
-        <Header />
-        <button onClick={() => setTheme(currentTheme => currentTheme === "dark" ? "light" : "dark")}>Toggle theme</button>
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/externalData' element={<ExternalData />} />
-          <Route path='/trainer' element={<Trainer name='JH' age={31} />} />
-          <Route path="/trainerSearch" element={<TrainerSearch />} />
-          <Route path='/trainerByID/:id' element={<TrainerByID />} />
-          <Route path='/queryTrainer' element={<QueryTrainer />} />
-          <Route path='/trainerSearch' element={<TrainerSearch />} />
-          <Route path='/picExample' element={<PicExample />} />
-          <Route path='/counter' element={<Counter />} />
-          <Route path='/liftingState' element={<TrainerContainer />} />
-        </Routes>
+        <Header updateTheme={updateTheme} />
+        <div className='mainContent'>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/externalData' element={<ExternalData />} />
+            <Route path='/trainer' element={<Trainer name='JH' age={31} />} />
+            <Route path="/trainerSearch" element={<TrainerSearch />} />
+            <Route path='/trainerByID/:id' element={<TrainerByID />} />
+            <Route path='/queryTrainer' element={<QueryTrainer />} />
+            <Route path='/trainerSearch' element={<TrainerSearch />} />
+            <Route path='/picExample' element={<PicExample />} />
+            <Route path='/counter' element={<Counter />} />
+            <Route path='/liftingState' element={<TrainerContainer />} />
+            <Route path='/server' element={<TrainerContainerServer />} />
+          </Routes>
+        </div>
         <Footer />
       </Router>
     </div>

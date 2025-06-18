@@ -1,0 +1,27 @@
+.formInput {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formInput:not(:first-child)
+
+.formInput>label {
+    margin-right: 1em;
+}
+
+form>div:last-child {
+    text-align: right;
+}
+
+#trainerForm {
+    max-width: fit-content;
+}
+
+
+#trainerForm > div:last-child {
+    text-align: right;
+}
+
+#trainerForm > div:not(:first-child) {
+        margin-top: 0.25em;
+}

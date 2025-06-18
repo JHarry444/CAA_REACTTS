@@ -6,11 +6,11 @@ export type TrainerProps = {
 
 function Trainer({name, age, specialty}: TrainerProps) {
 
-    return ( <>
+    return ( <div>
         <p>Name: {name}</p>
         <p>Age: {age}</p>
         <p>Specialty: {specialty}</p>
-    </> );
+    </div> );
 }
 
 export default Trainer;

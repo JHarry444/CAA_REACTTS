@@ -7,3 +7,41 @@
   background-color: black;
   color: white;
 }
+
+body {
+  margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+#root>div {
+  height: 100%;
+}
+
+.light,
+.dark {
+  min-height: fit-content;
+}
+
+.mainContent {
+  min-height: 80%;
+}
+
+.dark a {
+  color: white;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  max-width: 90%;
+}
+
+#themeToggle {
+  display: inline;
+}

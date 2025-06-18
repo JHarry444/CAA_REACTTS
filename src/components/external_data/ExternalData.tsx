@@ -1,4 +1,4 @@
-import trainers from "../data/data.json";
+import trainers from "../../data/data.json";
 import { v4 as uuidv4 } from 'uuid';
 import Trainer from "../misc/Trainer";
 
