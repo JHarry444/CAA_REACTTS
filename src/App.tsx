@@ -1,17 +1,17 @@
 import './App.css'
 import ExternalData from './components/ExternalData';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import HomePage from './components/HomePage';
+import Footer from './components/misc/Footer';
+import Header from './components/misc/Header';
+import HomePage from './components/misc/HomePage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Trainer from './components/Trainer';
+import Trainer from './components/misc/Trainer';
 import TrainerByID from './components/TrainerByID';
-import QueryTrainer from './components/QueryTrainer';
-import TrainerSearch from './components/TrainerSearch';
-import Counter from './components/Counter';
+import QueryTrainer from './components/routing/QueryTrainer';
+import TrainerSearch from './components/routing/TrainerSearch';
+import Counter from './components/state/Counter';
 import { useState } from 'react';
-import PicExample from './components/PicExample';
-import TrainerContainer from './components/TrainerContainer';
+import PicExample from './components/misc/PicExample';
+import TrainerContainer from './components/lifting_state/TrainerContainer';
 
 function App() {
   const [theme, setTheme] = useState("dark");

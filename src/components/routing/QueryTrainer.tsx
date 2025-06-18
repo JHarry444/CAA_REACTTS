@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
-import trainers from "./data.json";
-import Trainer from "./Trainer";
+import trainers from "../data/data.json";
+import Trainer from "../misc/Trainer";
 import { v4 as uuidv4 } from 'uuid';
 
 function QueryTrainer() {

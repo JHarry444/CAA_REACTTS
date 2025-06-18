@@ -1,6 +1,6 @@
-import trainers from "./data.json";
-import Trainer from "./Trainer";
+import trainers from "../data/data.json";
 import { v4 as uuidv4 } from 'uuid';
+import Trainer from "../misc/Trainer";
 
 function ExternalData() {
     return (<>
