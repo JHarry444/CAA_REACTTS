@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import trainers from "./data.json";
-import Trainer from "./Trainer";
+import trainers from "../data/data.json";
+import Trainer from "../misc/Trainer";
 
 function TrainerByID() {
 

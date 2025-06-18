@@ -1,17 +1,17 @@
 import './App.css'
-import ExternalData from './components/ExternalData';
 import Footer from './components/misc/Footer';
 import Header from './components/misc/Header';
 import HomePage from './components/misc/HomePage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Trainer from './components/misc/Trainer';
-import TrainerByID from './components/TrainerByID';
 import QueryTrainer from './components/routing/QueryTrainer';
 import TrainerSearch from './components/routing/TrainerSearch';
 import Counter from './components/state/Counter';
 import { useState } from 'react';
 import PicExample from './components/misc/PicExample';
 import TrainerContainer from './components/lifting_state/TrainerContainer';
+import ExternalData from './components/external_data/ExternalData';
+import TrainerByID from './components/routing/TrainerByID';
 
 function App() {
   const [theme, setTheme] = useState("dark");
