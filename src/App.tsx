@@ -11,6 +11,7 @@ import TrainerSearch from './components/TrainerSearch';
 import Counter from './components/Counter';
 import { useState } from 'react';
 import PicExample from './components/PicExample';
+import TrainerContainer from './components/TrainerContainer';
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -29,6 +30,7 @@ function App() {
           <Route path='/trainerSearch' element={<TrainerSearch />} />
           <Route path='/picExample' element={<PicExample />} />
           <Route path='/counter' element={<Counter />} />
+          <Route path='/liftingState' element={<TrainerContainer />} />
         </Routes>
         <Footer />
       </Router>

@@ -7,6 +7,7 @@ function Header() {
             <Link to="/externalData">External Data</Link>
             <Link to="/trainerSearch">Trainer Seach</Link>
             <Link to="/Counter">Counter</Link>
+            <Link className="" to="/liftingState">Lifting State</Link>
 
         </nav>
     </header>);
