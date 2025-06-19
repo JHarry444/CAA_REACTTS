@@ -32,10 +32,6 @@ body,
   min-height: 80%;
 }
 
-.dark a {
-  color: white;
-}
-
 header nav {
   display: flex;
   justify-content: space-around;
@@ -44,4 +40,8 @@ header nav {
 
 #themeToggle {
   display: inline;
+}
+
+a.dark {
+  color: white;
 }

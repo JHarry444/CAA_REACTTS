@@ -1,7 +1,7 @@
 function HomePage() {
     return ( <>
     <title>bloop</title>
-        <h2>Welcome hone!</h2>
+        <h2>Welcome home!</h2>
     </> );
 }
 

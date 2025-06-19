@@ -13,32 +13,34 @@ import TrainerContainer from './components/lifting_state/TrainerContainer';
 import ExternalData from './components/external_data/ExternalData';
 import TrainerByID from './components/routing/TrainerByID';
 import TrainerContainerServer from './components/external_data_server/TrainerContainerServer';
-
+import ThemeContext from './themeContext';
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
   const updateTheme = () => setTheme(currentTheme => currentTheme === "dark" ? "light" : "dark")
   return (
-    <div className={theme}>
-      <Router>
-        <Header updateTheme={updateTheme} />
-        <div className='mainContent'>
-          <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/externalData' element={<ExternalData />} />
-            <Route path='/trainer' element={<Trainer name='JH' age={31} />} />
-            <Route path="/trainerSearch" element={<TrainerSearch />} />
-            <Route path='/trainerByID/:id' element={<TrainerByID />} />
-            <Route path='/queryTrainer' element={<QueryTrainer />} />
-            <Route path='/trainerSearch' element={<TrainerSearch />} />
-            <Route path='/picExample' element={<PicExample />} />
-            <Route path='/counter' element={<Counter />} />
-            <Route path='/liftingState' element={<TrainerContainer />} />
-            <Route path='/server' element={<TrainerContainerServer />} />
-          </Routes>
-        </div>
-        <Footer />
-      </Router>
-    </div>
+    <ThemeContext.Provider value={{theme, updateTheme}}>
+      <div className={theme}>
+        <Router>
+          <Header />
+          <div className='mainContent'>
+            <Routes>
+              <Route path='/' element={<HomePage />} />
+              <Route path='/externalData' element={<ExternalData />} />
+              <Route path='/trainer' element={<Trainer name='JH' age={31} />} />
+              <Route path="/trainerSearch" element={<TrainerSearch />} />
+              <Route path='/trainerByID/:id' element={<TrainerByID />} />
+              <Route path='/queryTrainer' element={<QueryTrainer />} />
+              <Route path='/trainerSearch' element={<TrainerSearch />} />
+              <Route path='/picExample' element={<PicExample />} />
+              <Route path='/counter' element={<Counter />} />
+              <Route path='/liftingState' element={<TrainerContainer />} />
+              <Route path='/server' element={<TrainerContainerServer />} />
+            </Routes>
+          </div>
+          <Footer />
+        </Router>
+      </div>
+    </ThemeContext.Provider>
   )
 }
 

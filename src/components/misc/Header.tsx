@@ -1,14 +1,21 @@
 import { Link } from "react-router-dom";
+import ThemeContext from "../../themeContext";
+import { useContext } from "react";
 
-function Header({ updateTheme }: { updateTheme: () => void }) {
+function Header() {
+
+    const {theme, updateTheme} = useContext(ThemeContext);
+
     return (<header>
         <nav>
-            <Link to="/">Home</Link>
-            <Link to="/externalData">External Data</Link>
-            <Link to="/trainerSearch">Trainer Seach</Link>
-            <Link to="/Counter">Counter</Link>
-            <Link className="" to="/liftingState">Lifting State</Link>
-            <Link to="/server">External Data - Server</Link>
+            <Link className={theme} to="/">Home</Link>
+            <Link className={theme} to="/externalData">External Data</Link>
+            <Link className={theme} to="/trainerSearch">Trainer Seach</Link>
+            <Link className={theme} to="/Counter">Counter</Link>
+            <Link className={theme} to="/liftingState">Lifting State</Link>
+            <Link className={theme} to="/server">External Data - Server</Link>
+            <Link className={theme} to="/context">Context</Link>
+
             <button id="themeToggle" onClick={updateTheme} >Toggle theme</button>
 
         </nav>
