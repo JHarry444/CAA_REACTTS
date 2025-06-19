@@ -14,11 +14,12 @@ import ExternalData from './components/external_data/ExternalData';
 import TrainerByID from './components/routing/TrainerByID';
 import TrainerContainerServer from './components/external_data_server/TrainerContainerServer';
 import ThemeContext from './themeContext';
+import ComponentsWithKids from './components/misc/ComponentsWithKids';
 function App() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const updateTheme = () => setTheme(currentTheme => currentTheme === "dark" ? "light" : "dark")
   return (
-    <ThemeContext.Provider value={{theme, updateTheme}}>
+    <ThemeContext.Provider value={{ theme, updateTheme }}>
       <div className={theme}>
         <Router>
           <Header />
@@ -35,6 +36,8 @@ function App() {
               <Route path='/counter' element={<Counter />} />
               <Route path='/liftingState' element={<TrainerContainer />} />
               <Route path='/server' element={<TrainerContainerServer />} />
+              <Route path='/kids' element={<ComponentsWithKids />} />
+
             </Routes>
           </div>
           <Footer />
